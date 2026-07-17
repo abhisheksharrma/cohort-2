@@ -3,8 +3,69 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 html, body {
     width: 100%;
     height: 100%;
+}
+#main {
+    width: 100%;
+    height: 100vh;
+    background-image: url(bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: #000;
+}
+.content_area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 80px 20px;
+}
+.content_area h1 {
+    color: #555454;
+    font-size: clamp(80px, 7.813vw, 150px);
+    letter-spacing: -6px;
+    text-align: center;
+    text-shadow: 4px 4px 0px #ffffffb5;
+    font-weight: 800;
+    line-height: 1.1;
+}
+.content_area .btn {
+    display: flex;
+    margin-top: 30px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #101010;
+    padding: 20px 40px;
+    text-decoration: none;
+    border: 1px solid #ccc;
+    box-shadow: 5px 6px 0px 0px #a1a1a1;
+    transition: all 0.5s ease;
+}
+.content_area .btn:hover {
+    box-shadow: none;
+    background-color: #1f1f1f;
+}
+@media (max-width: 1600px) {
+    #main {
+        background-size: contain;
+        background-position: bottom center;
+    }
+}
+@media (max-width: 1200px) {
+    #main {
+        background-size: contain;
+        background-position: bottom center;
+    }
+    .content_area h1 {
+        letter-spacing: -3px;
+    }
+    .content_area .btn {
+        font-size: 18px;
+    }
 }
