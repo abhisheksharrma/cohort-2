@@ -1,9 +1,184 @@
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('fonts/HelveticaNeue-Medium.eot');
+    src: url('fonts/HelveticaNeue-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeue-Medium.woff2') format('woff2'),
+        url('fonts/HelveticaNeue-Medium.woff') format('woff'),
+        url('fonts/HelveticaNeue-Medium.ttf') format('truetype'),
+        url('fonts/HelveticaNeue-Medium.svg#HelveticaNeue-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('fonts/HelveticaNeue-Bold.eot');
+    src: url('fonts/HelveticaNeue-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeue-Bold.woff2') format('woff2'),
+        url('fonts/HelveticaNeue-Bold.woff') format('woff'),
+        url('fonts/HelveticaNeue-Bold.ttf') format('truetype'),
+        url('fonts/HelveticaNeue-Bold.svg#HelveticaNeue-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('fonts/HelveticaNeue-Light.eot');
+    src: url('fonts/HelveticaNeue-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeue-Light.woff2') format('woff2'),
+        url('fonts/HelveticaNeue-Light.woff') format('woff'),
+        url('fonts/HelveticaNeue-Light.ttf') format('truetype'),
+        url('fonts/HelveticaNeue-Light.svg#HelveticaNeue-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('fonts/HelveticaNeue-Roman.eot');
+    src: url('fonts/HelveticaNeue-Roman.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaNeue-Roman.woff2') format('woff2'),
+        url('fonts/HelveticaNeue-Roman.woff') format('woff'),
+        url('fonts/HelveticaNeue-Roman.ttf') format('truetype'),
+        url('fonts/HelveticaNeue-Roman.svg#HelveticaNeue-Roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Helvetica Neue';
 }
 html, body {
     width: 100%;
     height: 100%;
+}
+body {
+    background-color: #E2E2E2;
+}
+.header {
+    max-width: 90%;
+    margin: 20px auto 0;
+    height: 60px;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+.nav a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 500;
+}
+.nav .left_nav,
+.nav .right_nav {
+    display: flex;
+    gap: 40px;
+    font-size: 18px;
+}
+.nav .center {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.nav .center a {
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.main {
+    max-width: 90%;
+    margin: auto;
+    padding-top: 20px;
+    /* padding-bottom: 20px; */
+    position: relative;
+}
+.main .h1 {
+    font-size: clamp(100px, 21.875vw, 420px);
+    font-weight: 400;
+    line-height: 1;
+    color: #222;
+    letter-spacing: -5px;
+    margin-bottom: 100px;
+}
+.img_area {
+    position: relative;
+}
+
+.left_img {
+    position: absolute;
+    left: 44%;
+    top: -100px;
+    width: 250px;
+    height: 250px;
+}
+.center_img {
+    position: absolute;
+    left: 55%;
+    top: 10px;
+    width: 280px;
+    height: 280px;
+}
+.right_img {
+    position: absolute;
+    right: 15%;
+    top: -250px;
+    width: 280px;
+    height: 400px;
+}
+.left_img img,
+.center_img img,
+.right_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.bottom_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.left_bottom_top {
+    max-width: 250px;
+}
+.left_bottom_top h3,
+.left_bottom_top h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.left_bottom_top p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+.left_bottom_top h4 {
+    margin-top: 30px;
+}
+.left_bottom_bottom {
+    margin-top: 50px;
+}
+.left_bottom_bottom a {
+    text-decoration: none;
+    font-size: 28px;
+    color: #111;
+    font-style: italic;
+}
+.right_bottom a {
+    /* text-decoration: none; */
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 28px;
+    color: #111;
 }
