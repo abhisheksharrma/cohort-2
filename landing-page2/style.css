@@ -65,8 +65,8 @@ body {
     background-color: #E2E2E2;
 }
 .header {
-    max-width: 90%;
-    margin: 20px auto 0;
+    max-width: 1200px;
+    margin: auto;
     height: 60px;
 }
 .nav {
@@ -79,6 +79,10 @@ body {
     color: #111;
     text-decoration: none;
     font-weight: 500;
+    transition: all 0.5s ease;
+}
+.nav :not(.center) a:hover {
+    color:#3d3d3d;
 }
 .nav .left_nav,
 .nav .right_nav {
@@ -95,46 +99,57 @@ body {
     font-size: 40px;
     font-weight: 500;
     text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
 }
 .main {
-    max-width: 90%;
+    max-width: 1200px;
     margin: auto;
-    padding-top: 20px;
-    /* padding-bottom: 20px; */
+    padding: 20px;
     position: relative;
 }
 .main .h1 {
-    font-size: clamp(100px, 21.875vw, 420px);
+    font-size: 280px;
     font-weight: 400;
-    line-height: 1;
+    line-height: 0.8;
     color: #222;
     letter-spacing: -5px;
-    margin-bottom: 100px;
+    margin-top: 150px;
+    margin-bottom: 135px;
 }
 .img_area {
     position: relative;
 }
-
+.img_area > div {
+    overflow: hidden;
+    cursor: pointer;
+}
+.img_area > div img {
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+.img_area > div:hover img {
+    transform: scale(1.1);
+}
 .left_img {
     position: absolute;
-    left: 44%;
-    top: -100px;
-    width: 250px;
-    height: 250px;
+    left: 42%;
+    top: -75px;
+    width: 190px;
+    height: 190px;
 }
 .center_img {
     position: absolute;
-    left: 55%;
-    top: 10px;
-    width: 280px;
-    height: 280px;
+    left: 53%;
+    top: 20px;
+    width: 200px;
+    height: 210px;
 }
 .right_img {
     position: absolute;
     right: 15%;
-    top: -250px;
-    width: 280px;
-    height: 400px;
+    top: -200px;
+    width: 210px;
+    height: 310px;
 }
 .left_img img,
 .center_img img,
@@ -147,6 +162,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+     margin-top: 200px;
 }
 .left_bottom_top {
     max-width: 250px;
@@ -170,15 +186,23 @@ body {
 }
 .left_bottom_bottom a {
     text-decoration: none;
-    font-size: 28px;
+    font-size: 24px;
     color: #111;
     font-style: italic;
 }
 .right_bottom a {
-    /* text-decoration: none; */
     display: flex;
     align-items: center;
-    gap: 15px;
-    font-size: 28px;
+    gap: 8px;
+    font-size: 24px;
     color: #111;
+    transform: scale(1);
+    transition: all 0.5s ease;
+}
+.right_bottom a svg {
+    width: 20px;
+    height: 20px;
+}
+.right_bottom a:hover {
+    transform: scale(1.05);
 }
