@@ -44,11 +44,11 @@ body {
 .card h3 {
     font-size: 30px;
     font-weight: 600;
-    color: #1e4ee9;
+    color: #18191e;
     margin-top: 10px;
 }
 .card p {
-    color: #1536a3;
+    color: #18191e;
     font-size: 20px;
     line-height: 1.4;
 }
@@ -56,9 +56,10 @@ body {
     display: flex;
     width: fit-content;
     padding: 12px 20px;
-    background-color: #1e4ee9;
-    color: #fff;
+    background-color: transparent;
+    color: #1e4ee9;
     text-decoration: none;
+    border: 1px solid #1e4ee9;
     font-size: 18px;
     letter-spacing: 1px;
     border-radius: 30px;
@@ -68,6 +69,7 @@ body {
 .card .card-btn:hover {
     transform: scale(1.05);
     background-color: #163dbd;
+    color: #fff;
 }
 .card:hover .card-img img {
     transform: scale(1.2);
