@@ -69,12 +69,20 @@ main .banner {
   text-align: center;
   gap: 1.25rem;
   padding: 3.75rem 1.25rem 2.5rem;
-  height: 37.5rem;
-  background-image: url("./images/banner-home.jpg");
+  height: 42.5rem;
+  position: relative;
+  margin-top: 20px;
   background-size: cover;
   background-position: center center;
 }
-main .banner h1 {
+main .banner:first-child {
+  margin-top: 0;
+}
+main .banner .banner-content {
+  max-width: 600px;
+  margin-inline: auto;
+}
+main .banner .banner-heading {
   font-size: 50px;
   margin-bottom: 10px;
   font-family: "sfprodisplay-semibold";
@@ -107,4 +115,18 @@ main .banner .btn_grp a + a {
 main .banner .btn_grp a:hover {
   background-color: #0071e3;
   color: #fff;
+}
+main .banner .banner-img {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+}
+main .banner .banner-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
