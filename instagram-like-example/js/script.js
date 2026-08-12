@@ -6,7 +6,7 @@ const imgArea = document.querySelector(".img_area");
 const imgLike = document.querySelector(".img_like");
 const svg = document.querySelector(".img_like svg");
 const heartLike = document.querySelector(".like-heart");
-let value = 0;
+let flag = 0;
 
 // Double Click function
 imgArea.addEventListener("dblclick", function(){
@@ -26,12 +26,12 @@ imgArea.addEventListener("dblclick", function(){
 
 // Single Click function
    heartLike.addEventListener("click", function() {
-    if (value === 0) {
+    if (flag === 0) {
         heartLike.style.fill="red";
-        value = 1;
+        flag = 1;
     }
     else {
         heartLike.style.fill="transparent";
-        value = 0;
+        flag = 0;
     }
    }) 
