@@ -1,13 +1,24 @@
 ::selection {
-    color: transparent;
+    /* background-color: #000; */
+    /* color: #fff; */
+    background: none;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body, html {
+    width: 100%;
+    height: 100%;
 }
 body {
     background-color: #333;
+    line-height: 1.4;
 }
 main {
     width: 100%;
@@ -18,6 +29,12 @@ main {
     height: 100%;
     width: 400px;
     margin: auto;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    scroll-snap-type: y mandatory;
+}
+.reels::-webkit-scrollbar {
+    display: none;
 }
 .reel {
     width: 100%;
@@ -25,6 +42,100 @@ main {
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    scroll-snap-align: start;
+}
+.reel + .reel {
+    margin-top: 10px;
+}
+.reel .video_wrapper {
+    width: 100%;
+    height: 100%;
+}
+.video_wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.overlay {
+    position: absolute;
+    inset: 0;
+    /* pointer-events: none; */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    background-image: linear-gradient(to top, #000, rgba(0, 0, 0, 0)),
+                linear-gradient(to left top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+.sound_btn {
+    background: rgba(0, 0, 0, 0.3);
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
+.sound_btn svg {
+    fill: #ffffff;
+}
+.sound_btn .unmute {
+    display: none;
+}
+.sound_btn .mute {
+    display: block;
+}
+.sound_btn.mute .unmute {
+    display: block;
+}
+.sound_btn.mute .mute {
+    display: none;
+}
+.user_info {
+    padding-right: 70px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+.user_info .user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.user .user_name {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+.user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user button {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 2px 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+.follow_btn.active {
+    background: #fff;
+    color: #111;
+}
+.user_info p {
+    font-style: 16px;
+    color: #fff;
+
 }
 .img_area {
     width: 100%;
@@ -71,17 +182,36 @@ main {
 }
 .actions {
     position: absolute;
-    width: 100%;
-    bottom: 0px;
-    padding: 10px 20px;
+    right: 15px;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.actions button {
+    background: transparent;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.actions button svg {
+    width: 32px;
+    height: 32px;
+    stroke: #fff;
+    fill: transparent;
+    transition: all 0.3s ease;
+}
+.actions button.active svg {
+    fill: #ff0000;
+    stroke: #ff0000;
 }
 .like {
     width: auto;
     height: auto;
-}
-.like .like-heart {
-    stroke: #fff;
-    width: 50px;
-    height: 50px;
-    fill: transparent;
 }
