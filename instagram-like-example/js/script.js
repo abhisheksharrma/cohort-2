@@ -208,6 +208,28 @@ reels.forEach((reel) => {
         }
     });
 
+    const bigHeart = singleReel.querySelector(".big_heart");
+    singleReel.addEventListener("dblclick", function(event){
+        if (event.target.closest("button")) return;
+        if (!reel.liked) {
+
+        reel.liked = true;
+        reel.likes++;
+
+        const likeButton = singleReel.querySelector(".like_btn");
+        const count = likeButton.querySelector(".count");
+
+        likeButton.classList.add("active");
+        count.textContent = reel.likes;
+    }
+        bigHeart.classList.remove("show");
+        void bigHeart.offsetWidth;
+        bigHeart.classList.add("show");
+
+        setTimeout(() => {
+            bigHeart.classList.remove("show");
+        }, 1000);
+    });
 
 });
 
