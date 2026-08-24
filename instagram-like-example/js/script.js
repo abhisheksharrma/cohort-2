@@ -266,3 +266,24 @@ userInfo.forEach((user, index) => {
         
     })
 });
+
+// video play and pause
+    const reelVideos = document.querySelectorAll(".reel_video");
+    const reelObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            const reelVideo = entry.target;
+            if(entry.isIntersecting) {
+                reelVideo.play();
+            } else { 
+                reelVideo.pause();
+            }
+        });
+    },
+    {
+        threshold: 0.7
+    }
+    );
+    reelVideos.forEach((reelVideo) => {
+        reelObserver.observe(reelVideo);
+    })
+
