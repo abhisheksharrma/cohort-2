@@ -10,6 +10,12 @@ body {
   height: 100vh;
 }
 
+header {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, #072342, #040c17);
+}
+
 .cursor-follower {
   width: 2rem;
   height: 2rem;
