@@ -52,7 +52,45 @@ app.get("/api/notes", async (req,res) => {
     })
 })
 
+// 
+// DELETE  /api/notes/:id 
+// delete note with the id from req.params
+// 
+app.delete("/api/notes/:id", async (req,res) => {
+    const id = req.params.id
 
+    console.log(id)
+     await noteModel.findByIdAndDelete(id)
+
+    res.status(200).json({
+        message:"Note deleted successfully.",
+        
+    })
+})
+
+
+// 
+// PATCH  /api/notes/:id 
+// update the description of the note by id
+//  data will be in form of req.body = {description}
+app.patch("/api/notes/:id", async (req,res) => {
+    const id = req.params.id
+    const {description} = req.body
+
+    await noteModel.findByIdAndUpdate(id, { description })
+
+    res.status(200).json({
+        message: "Note updated successfully"
+    })
+
+} )
+
+// console.log(__dirname)
+
+app.use("*name", (req,res) => {
+    // res.send("this is wild card")
+    res.sendFile(path.join(__dirname, "..", "/public/index.html"))
+})
 
 
 
