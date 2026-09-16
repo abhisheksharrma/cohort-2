@@ -53,6 +53,9 @@ function App() {
     <>
       <div className="container">
         <Header />
+        <div className='ddd'>
+          <Menu className="menu" />
+        </div>
         <Footer />
       </div>
     </>
@@ -66,6 +69,39 @@ function Header () {
     <header className="header">
       <h1>Fast React Pizza Co.</h1>
     </header>
+  )
+}
+
+function Menu () {
+  const pizzas = pizzaData;
+  const numpizzas = pizzas.length;
+  console.log(pizzas, numpizzas);
+  return (
+    <>
+      <ul className="pizzas">
+        {
+          pizzas.map((pizza) => (
+            <Pizza pizzaObj = {pizza} key={pizza.name}  />
+          ))
+        }
+      </ul>
+    </>
+  )
+}
+
+function Pizza ({pizzaObj}) {
+  console.log(pizzaObj)
+  return (
+    <>
+    <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : "" }`}>
+      <img src={pizzaObj.photoName} alt="" />
+      <div>
+        <h3>{pizzaObj.name}</h3>
+        <p>{pizzaObj.ingredients}</p>
+        <span>${pizzaObj.price}</span>
+      </div>
+    </li>
+    </>
   )
 }
 
