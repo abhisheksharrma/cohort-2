@@ -65,7 +65,6 @@ function App() {
 
   return (
     <>
-
       <div className='form-wrapper'>
         <form className='note-form' onSubmit={handleSubmit}>
           <div className="form-grp">
