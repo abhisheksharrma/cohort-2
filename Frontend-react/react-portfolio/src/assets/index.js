@@ -1,0 +1,8 @@
+export { default as person1 } from "./agency/person-1.jpg"
+export { default as person2 } from "./agency/person-2.jpg"
+export { default as person3 } from "./agency/person-3.jpg"
+export { default as person4 } from "./agency/person-4.jpg"
+export { default as person5 } from "./agency/person-5.jpg"
+export { default as person6 } from "./agency/person-6.jpg"
+export { default as person7 } from "./agency/person-7.jpg"
+export { default as person8 } from "./agency/person-8.jpg"
