@@ -25,14 +25,13 @@ useGSAP(function(){
     gsap.to(imgAnimationSecionFirst.current,{
         scrollTrigger: {
             trigger: imgAnimationSecionFirst.current,
-            markers: true,
             start: "top 0%",
             end: "top -140%",
             pin: true,
             pinSpacing: true,
             pinReparent: true,
             pinType: 'transform',
-            // scrub: 1, 
+            scrub: 1, 
             anticipatePin: 1,
             invalidateOnRefresh: true,
             onUpdate: function (el) {

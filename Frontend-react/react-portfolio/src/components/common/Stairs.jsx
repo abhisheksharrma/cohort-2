@@ -46,7 +46,7 @@ const pageRef = useRef(null)
   }, [currentPath])
 
     return (
-    <div>
+    <div className='overflow-x-hidden'>
         <div ref={stairWrapperRef} className="w-full h-screen fixed top-0 z-10">
             <div className="w-full h-full flex">
                 <div className="stair h-full w-1/5 bg-black"></div>
