@@ -13,3 +13,28 @@ body {
   background-color: #121212;
   color: #cacaca;
 }
+
+
+.nav-link .link-hover {
+  opacity: 0;
+  transition: all ease 0.3s;
+}
+.nav-link:hover .link-hover {
+  opacity: 1;
+}
+
+.moveX {
+  animation-name: moveAnimation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes moveAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
