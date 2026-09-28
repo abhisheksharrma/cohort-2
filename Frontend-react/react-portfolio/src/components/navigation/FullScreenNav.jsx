@@ -11,32 +11,7 @@ const FullScreenNav = () => {
     const fullScreenRef = useRef(null)
     const [navOpen, setNavOpen] = useContext(NavbarContext)
 
-    // console.log(navOpen)
     
-    //   useGSAP(function(){
-    //     const tl = gsap.timeline()
-    //     // tl.to("#fullscreennav",{
-    //     //     display: "block",
-
-    //     // })
-    //     tl.from(".stair-ing", {
-    //         height: 0,
-    //         stagger: {
-    //           amount: -0.2
-    //         }
-    //     })
-    //     tl.from("fullNavLinkRef.current", {
-    //         opacity: 0,
-    //     })
-    //     tl.from(".nav-link", {
-    //         opacity: 0,
-    //         rotateX: 90,
-    //         stagger: {
-    //           amount: 0.2
-    //         }
-    //     })
-    //     tl.pause()
-    //   })
 
 
     function gsapAnimation() {
