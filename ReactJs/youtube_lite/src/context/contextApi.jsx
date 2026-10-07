@@ -13,6 +13,7 @@ export const AppContext = (props) => {
       fetchSelectedCategoryData(selectCategories)
     }, [selectCategories])
 
+    
     const fetchSelectedCategoryData = (query) => {
         setLoading(true)
         fetchDataFromApi(`search/?q=${query}`).then(({contents}) => {
@@ -22,6 +23,10 @@ export const AppContext = (props) => {
             
         })
     }
+    
+    
+
+    
 
     return (
         <Context.Provider value={{
