@@ -14,7 +14,12 @@ import { Context } from "../context/contextApi";
 
 const Header = () => {
   return (
-    <div>Header</div>
+    <>
+      <div className="flex">
+        <div>Logo</div>
+        <div>List</div>
+      </div>
+    </>
   )
 }
 
