@@ -76,7 +76,7 @@ const VideoDetails = () => {
                     }}
                   > */}
               <ReactPlayer
-                  // src={`https://www.youtube.com/watch?v=${id}`}
+                  src={`https://www.youtube.com/watch?v=${id}`}
                   //         controls={false}
                   //         style={{ backgroundColor: "#000000","--controls": "none",width: "100%",
                   // height: "100%", }}

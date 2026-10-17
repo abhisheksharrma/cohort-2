@@ -2,8 +2,8 @@ import React from 'react';
 // import { abbreviateNumber } from "js-abbreviation-number";
 import { Link } from "react-router-dom";
 import { BsFillCheckCircleFill } from "react-icons/bs";
-import VideoLength from '../shared/VideoLength';
 import NumberAbbreviate from 'number-abbreviate';
+import VideoLength from '../shared/VideoLength';
 
 const VideoCard = ({video}) => {
   return (
