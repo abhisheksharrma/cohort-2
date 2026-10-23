@@ -8,10 +8,10 @@ const Projects = () => {
       </div>
       <div>
         <div className='flex w-full gap-4'>
-          <div className='w-1/2 h-[300px]'>Projects 1</div>
-          <div className='w-1/2 h-[300px]'>Projects 2</div>
-          <div className='w-1/2 h-[300px]'>Projects 1</div>
-          <div className='w-1/2 h-[300px]'>Projects 2</div>
+          <div className='w-1/2 h-[320px]'>Projects 1</div>
+          <div className='w-1/2 h-[320px]'>Projects 2</div>
+          <div className='w-1/2 h-[320px]'>Projects 3</div>
+          <div className='w-1/2 h-[320px]'>Projects 4</div>
         </div>
       </div>
     </div>
