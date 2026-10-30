@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <div>
       <div className='pt-[45vh]'>
-        <h2 className="font-[font-Lausanne-500] text-[9.5vw] uppercase">Projets</h2>
+        <h2 className="font-[font-Lausanne-500] text-[9.5vw] uppercase">Projets<span>{projectImages.length}</span></h2>
       </div>
       <div className='-mt-20'>
         <div className='w-full h-full flex flex-wrap gap-4'>
